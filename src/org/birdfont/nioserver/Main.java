@@ -13,12 +13,11 @@ public class Main {
 			Server server = new Server();
 			
 			// TODO: load a keystore to the ssl service, you can use Java Keytool to generate the key
-			InputStream keyStore = null;
-			
-			if (keyStore == null) {
-				System.err.println("No keystore has been added to the project.");
-				return;
-			}
+
+			ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+			InputStream keyStore = classLoader.getResourceAsStream("testkeys");
+
+			System.err.println("Remember to generate a certificate with Java Keytool");
 			
 			server.setKeyStore(keyStore, "testkeys");
 			server.setup();
