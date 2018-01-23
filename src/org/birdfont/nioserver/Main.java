@@ -3,7 +3,7 @@ package org.birdfont.nioserver;
 import java.io.IOException;
 import java.io.InputStream;
 
-/** A small server using java nio framwork and ssl
+/** A small server using java nio framework and SSL
  * @author Johan Mattsson
  */
 public class Main {
